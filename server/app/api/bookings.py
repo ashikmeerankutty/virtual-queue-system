@@ -5,7 +5,6 @@ from app.services import BookingService
 from app.models import BookingModel
 
 @bp.route('/api/v1/booking.addBooking', methods=['POST'])
-@accessManager()
 def setToken():
     data = request.get_json()
     bookingService = BookingService()
