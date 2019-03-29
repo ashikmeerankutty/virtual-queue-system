@@ -17,7 +17,7 @@ class BookingModel(BaseModel):
         return data
 
     def __repr__(self):
-        return f'<Booking {self.phone}>'
+        return "<Booking>"
 
 class BookingCounter(BaseModel):
     __tablename__ = 'counter'
@@ -32,4 +32,4 @@ class BookingCounter(BaseModel):
         return data
 
     def __repr__(self):
-        return f'<Counter {self.counter}>'
+        return "<Counter>"
