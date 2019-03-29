@@ -1,1 +1,1 @@
-from app.models.bookings import BookingModel,BookingCounter
+from app.models.bookings import BookingModel,BookingCounter,DoctorModel,UserDepartmentModel

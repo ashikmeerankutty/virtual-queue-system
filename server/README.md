@@ -30,3 +30,8 @@ Run the project
 ```
 docker-compose up
 ```
+- 1 : General
+- 2 : Emergency
+- 3 : Dermatology
+- 4 : Cardiology
+- 5 : Haematology
