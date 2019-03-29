@@ -30,3 +30,11 @@ def getDoctors():
     data = DoctorModel.to_collection_dict(data['page'],data['count'])
     return jsonify({"data": data}), 200
 
+
+@bp.route('/api/v1/booking.getBookingsDepartment', methods=['POST'])
+def getBookingsDepartment():
+    data = request.get_json()
+    department = DoctorModel.query.get(data['id'])
+    datas = UserDepartmentModel.query.filter_by(department=department).all()
+    records = [data.to_dict() for data in datas]
+    return jsonify({"data": records}), 200
