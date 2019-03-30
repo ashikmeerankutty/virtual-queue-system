@@ -9,7 +9,7 @@ def setToken():
     data = request.get_json()
     bookingService = BookingService()
     booking = bookingService.addToken(data['phone'],data['doctorid'])
-    return jsonify({"msg": "Success"}), 200
+    return jsonify({"msg": booking}), 200
 
 @bp.route('/api/v1/booking.getBookings', methods=['POST'])
 def getTokens():

@@ -16,6 +16,7 @@ class BookingService(object):
         db.session.add(bookinguser)
         db.session.commit()
         self.incrementCounter()
+        return genToken
 
     def incrementCounter(self):               
         counter = BookingCounter.query.get(1)
